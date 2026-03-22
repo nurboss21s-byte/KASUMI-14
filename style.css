@@ -1,0 +1,59 @@
+/* Сброс отступов и шрифт */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  /* Фоновое изображение */
+  background-image: url('foto.jpg.jpeg'); /* путь к изображению */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Полупрозрачная тёмная подложка */
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Окно с контентом */
+.box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Логотип */
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Поля ввода и кнопка */
+input, button {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #fa2a05;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #e91e63;
+}

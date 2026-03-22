@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>KASUMI BONUS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay">
+  <div class="box">
+    <!-- Логотип -->
+    <img src="foto.jpg.jpeg" class="logo" alt="Kasumi Logo">
+
+    <h2>Проверка бонусов</h2>
+
+    <input type="text" id="search" placeholder="Введите номер или имя">
+    <button onclick="findUser()">Найти</button>
+
+    <div id="result"></div>
+  </div>
+</div>
+
+<script>
+  const users = [
+    { name: "Бауыржан", phone: "87759648805", points: 10 },
+    { name: "Асан", phone: "87001234567", points: 15 },
+    { name: "Айжан", phone: "87009876543", points: 20 },
+    { name: "Нурлыхан", phone: "87767861289", points: 5 },
+    { name: "Нурсултан", phone: "87762201545", points: 10 },
+    { name: "Наргиз", phone: "87073163195", points: 20 },
+    { name: "Касуми", phone: "87012253232", points: 20 },
+    { name: "Нурсултан", phone: "87762201545", points: 10},\
+    { name: "Амалгуль", phone: "", points: 5}
+  ];
+
+  function findUser() {
+    const input = document.getElementById("search").value.toLowerCase();
+    const result = document.getElementById("result");
+
+    const user = users.find(u =>
+      u.phone.includes(input) || u.name.toLowerCase().includes(input)
+    );
+
+    if (user) {
+      result.innerHTML = "👤 " + user.name + "<br>⭐ Баллы: " + user.points;
+    } else {
+      result.innerHTML = "❌ Не найдено";
+    }
+  }
+</script>
+
+</body>
+</html>
